@@ -1,0 +1,41 @@
+body {
+  background: #d5d4d4; /* 这是之前的背景颜色，如果你想要背景图片，你可以注释掉这一行 */
+  background-image: url('true.jpg'); /* 指定背景图片的路径 */
+  background-size: cover; /* 使背景图片覆盖整个元素，可根据需要调整 */
+  background-position: center; /* 将背景图片居中 */
+  background-repeat: no-repeat; /* 防止背景图片重复 */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 添加这一行以确保内容垂直居中 */
+  min-height: 100vh; /* 确保body至少与视口一样高 */
+}
+
+#alice-container {
+  width: 90vh;
+  display: grid;
+  place-items: center;
+  grid-template-areas:
+    "a1 . ."
+    ". a2 ."
+    ". . a3";
+}
+
+#alice1 {
+  grid-area: a1;
+  transform-origin: top left;
+}
+
+#alice2 {
+  grid-area: a2;
+  transform-origin: center;
+}
+
+#alice3 {
+  grid-area: a3;
+  transform-origin: bottom right;
+}
+
+#alice1, #alice2, #alice3 {
+  width: 200px; /* 设置图片宽度 */
+  height: 200px; /* 设置图片高度 */
+}
